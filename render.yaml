@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ai-study-api
+    runtime: docker
+    repo: https://github.com/adminhelper/ai-study
+    rootDir: ai-study-api
+    dockerfilePath: ./Dockerfile
+    branch: main
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod

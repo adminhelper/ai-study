@@ -136,7 +136,7 @@ export const roadmapData: RoadmapStage[] = [
         description: '자료 조사에 AI를 활용하는 3단계: ① 탐색 — Perplexity에 주제를 물어 최신 소스와 개요를 파악합니다. "2026년 한국 이커머스 시장 트렌드를 주요 보고서 인용과 함께 정리해줘". ② 심화 — Claude에 보고서 PDF를 업로드하고 핵심 내용을 추출합니다. "이 50페이지 보고서에서 시장 규모, 성장률, 주요 플레이어 3곳을 표로 정리해줘". Claude Opus 4.6은 1M 토큰(약 750,000단어)까지 한 번에 처리 가능하여 수백 페이지 문서도 통째로 분석할 수 있습니다. ③ 비교 — "A안과 B안의 장단점을 표로 비교해줘". 이 3단계로 하루 걸리던 리서치를 1시간으로 줄일 수 있습니다.',
         resources: [
           { label: 'Perplexity AI', url: 'https://www.perplexity.ai' },
-          { label: 'Claude — 파일 업로드 가이드', url: 'https://support.anthropic.com/en/articles/9576088-how-do-i-upload-files-to-claude' },
+          { label: 'Claude — 파일 업로드 가이드', url: 'https://docs.anthropic.com/en/docs/build-with-claude/pdf-support' },
         ],
         difficulty: 'beginner',
       },
@@ -220,7 +220,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'Copilot / Cursor와 뭐가 다른가',
-        description: '2026년 기준, 세 도구의 포지셔닝이 더 명확해졌습니다. GitHub Copilot ($10~19/월) — GPT-5·Claude·Gemini 모델 선택 가능, 모든 IDE에서 작동. 코딩 중 자동완성 + Agent Mode 추가. GitHub 생태계(이슈, PR)와의 통합이 최대 강점. Cursor ($20/월) — Claude Opus 기반 AI-네이티브 IDE. VS Code를 포크한 전용 에디터에서 코드베이스 전체를 이해하고 대화형으로 수정. 개발자가 주도권을 쥐고 AI와 협업하는 방식. Claude Code (사용량 기반) — 터미널에서 프로젝트 전체를 자율적으로 분석·수정·테스트·배포. 가장 높은 자율성. SWE-bench 72.5%로 코딩 정확도 1위. 핵심 차이: Copilot = "빠른 자동완성", Cursor = "대화형 페어 프로그래밍", Claude Code = "자율 AI 개발자". 많은 시니어 개발자들은 Cursor(일상 코딩)와 Claude Code(복잡한 작업)를 병행합니다.',
+        description: '2026년 기준, 세 도구의 포지셔닝이 더 명확해졌습니다. GitHub Copilot ($10~19/월) — GPT-5·Claude·Gemini 모델 선택 가능, 모든 IDE에서 작동. 코딩 중 자동완성 + Agent Mode 추가. GitHub 생태계(이슈, PR)와의 통합이 최대 강점. Cursor ($20/월) — Claude Opus 기반 AI-네이티브 IDE. VS Code를 포크한 전용 에디터에서 코드베이스 전체를 이해하고 대화형으로 수정. 개발자가 주도권을 쥐고 AI와 협업하는 방식. Claude Code (사용량 기반) — 터미널에서 프로젝트 전체를 자율적으로 분석·수정·테스트·배포. 가장 높은 자율성. Opus 4.6 기준 SWE-bench 80.8%로 코딩 벤치마크 최정상급. 핵심 차이: Copilot = "빠른 자동완성", Cursor = "대화형 페어 프로그래밍", Claude Code = "자율 AI 개발자". 많은 시니어 개발자들은 Cursor(일상 코딩)와 Claude Code(복잡한 작업)를 병행합니다.',
         resources: [
           { label: 'GitHub Copilot', url: 'https://github.com/features/copilot' },
           { label: 'Cursor', url: 'https://cursor.sh' },
@@ -299,7 +299,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: '비용 & 토큰 관리',
-        description: 'Claude Code 사용 비용을 관리하는 법: [인증별 과금 방식] Claude Max 구독($100~200/월) → Claude Code 무제한 사용. 헤비 유저에게 가장 경제적. Claude Pro($20/월) → 일정량 무료 포함, 초과 시 속도 제한. 가벼운 사용에 적합. API 키(종량제) → 토큰 단위 과금. Opus 4.6 기준 입력 $15/출력 $75 per 1M 토큰. 코딩 세션 하나에 $1~$10 정도. [비용 절약 팁] ① /compact를 자주 사용 — 긴 대화를 요약해 토큰 수를 줄임 ② Sonnet 모델 사용 — /model로 변경. Opus의 약 1/5 가격에 대부분의 작업을 처리 ③ 한 번에 하나의 명확한 작업 요청 — 모호한 질문은 AI가 여러 번 시도하며 토큰을 낭비 ④ /clear로 불필요한 이전 대화 정리. API 키 사용자는 Anthropic Console에서 일일 한도를 설정하세요.',
+        description: 'Claude Code 사용 비용을 관리하는 법: [인증별 과금 방식] Claude Max 구독($100~200/월) → Claude Code 무제한 사용. 헤비 유저에게 가장 경제적. Claude Pro($20/월) → 일정량 무료 포함, 초과 시 속도 제한. 가벼운 사용에 적합. API 키(종량제) → 토큰 단위 과금. Opus 4.6 기준 입력 $5/출력 $25 per 1M 토큰(200K 초과 시 $10/$37.50). 코딩 세션 하나에 $1~$10 정도. [비용 절약 팁] ① /compact를 자주 사용 — 긴 대화를 요약해 토큰 수를 줄임 ② Sonnet 모델 사용 — /model로 변경. Opus의 약 60% 가격($3/$15)에 대부분의 작업을 처리 ③ 한 번에 하나의 명확한 작업 요청 — 모호한 질문은 AI가 여러 번 시도하며 토큰을 낭비 ④ /clear로 불필요한 이전 대화 정리. API 키 사용자는 Anthropic Console에서 일일 한도를 설정하세요.',
         resources: [
           { label: 'Anthropic 요금제', url: 'https://www.anthropic.com/pricing' },
           { label: 'Anthropic Console (API 사용량)', url: 'https://console.anthropic.com/' },
@@ -354,7 +354,7 @@ export const roadmapData: RoadmapStage[] = [
         title: '좋은 프롬프트 vs 나쁜 프롬프트',
         description: 'Claude Code 프롬프트의 핵심 원칙 3가지: ① 구체적으로 — ❌ "버그 고쳐줘" → ✅ "로그인 페이지에서 비밀번호 입력 후 Enter를 누르면 폼이 제출되지 않는 버그를 수정해줘. handleSubmit 함수가 호출되는지 확인하고 고쳐줘". ② 한 번에 하나 — ❌ "로그인 만들고 회원가입도 만들고 프로필도 만들어줘" → ✅ "먼저 로그인 기능을 만들어줘. 이메일+비밀번호 방식으로". 완료 후 다음 작업 요청. ③ 완료 기준 명시 — ❌ "테스트 작성해줘" → ✅ "로그인 API에 대한 테스트를 작성해줘. 성공 케이스 1개, 실패 케이스 2개(잘못된 비밀번호, 미등록 이메일), npm test가 통과해야 함".',
         resources: [
-          { label: 'Claude Code 프롬프트 팁', url: 'https://docs.anthropic.com/en/docs/claude-code/tips-and-tricks' },
+          { label: 'Claude Code 프롬프트 팁', url: 'https://docs.anthropic.com/en/docs/claude-code/best-practices' },
         ],
         difficulty: 'beginner',
       },
@@ -501,7 +501,7 @@ export const roadmapData: RoadmapStage[] = [
         title: '디버깅 실전',
         description: 'Claude Code로 버그를 잡는 3단계 프로세스: ① 에러 전달 — 터미널의 에러 메시지를 그대로 복사해서 "이 에러를 분석하고 원인을 찾아줘"라고 요청. 또는 cat error.log | claude -p "이 에러 로그를 분석해줘"로 파이프. ② 재현 확인 — "이 버그를 재현하는 최소한의 테스트 코드를 작성해줘". 재현 가능한 테스트가 있으면 수정 확인이 쉬워집니다. ③ 수정 + 검증 — "이 버그를 수정하고, 수정이 맞는지 테스트를 돌려서 확인해줘". Claude Code가 수정 → 테스트 → 결과 확인을 자동으로 반복합니다. 핵심: 에러 메시지를 요약하지 말고 "전체"를 붙여넣으세요. 스택 트레이스의 한 줄이 단서가 될 수 있습니다.',
         resources: [
-          { label: 'Claude Code 팁 & 트릭', url: 'https://docs.anthropic.com/en/docs/claude-code/tips-and-tricks' },
+          { label: 'Claude Code 팁 & 트릭', url: 'https://docs.anthropic.com/en/docs/claude-code/best-practices' },
         ],
         difficulty: 'intermediate',
       },
@@ -611,7 +611,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'AI 에이전트 — 다음 단계',
-        description: '2026년, AI 에이전트는 더 이상 실험이 아닌 실전 기술입니다. Fortune 500 기업의 40% 이상이 AI 에이전트를 프로덕션에서 운영 중입니다 (Gartner 2026). AI 에이전트란: 스스로 계획하고 → 도구를 사용하고 → 결과를 검증하고 → 다음 행동을 결정하는 자율적 시스템. Claude Code 자체가 대표적인 AI 에이전트입니다. 2026년 현재 주요 에이전트 프레임워크: ① LangGraph — 기업 환경 1위 (월 3,400만 다운로드), 상태 관리가 핵심 강점. 복잡한 분기 워크플로우에 최적 ② CrewAI — 역할 기반 멀티 에이전트 협업, 직관적 API. 빠른 프로토타이핑에 추천 ③ OpenAI Agents SDK — OpenAI 공식 에이전트 프레임워크, 간결한 설계 ④ Google ADK — Gemini + Google 서비스 연동 강점. 실전 사례: 고객 문의 자동 응답, 코드 리뷰 자동화, 데이터 분석 보고서 생성. 에이전트 시장 규모: 2025년 $78억 → 2030년 $526억 예상. AI를 "도구"로 쓰는 것에서 AI가 "동료"로 일하는 시대로 전환 중입니다.',
+        description: '2026년, AI 에이전트는 더 이상 실험이 아닌 실전 기술입니다. Gartner에 따르면 2026년 말까지 엔터프라이즈 앱의 40%가 AI 에이전트를 탑재할 전망입니다. AI 에이전트란: 스스로 계획하고 → 도구를 사용하고 → 결과를 검증하고 → 다음 행동을 결정하는 자율적 시스템. Claude Code 자체가 대표적인 AI 에이전트입니다. 2026년 현재 주요 에이전트 프레임워크: ① LangGraph — 기업 환경 1위 (월 3,400만 다운로드), 상태 관리가 핵심 강점. 복잡한 분기 워크플로우에 최적 ② CrewAI — 역할 기반 멀티 에이전트 협업, 직관적 API. 빠른 프로토타이핑에 추천 ③ OpenAI Agents SDK — OpenAI 공식 에이전트 프레임워크, 간결한 설계 ④ Google ADK — Gemini + Google 서비스 연동 강점. 실전 사례: 고객 문의 자동 응답, 코드 리뷰 자동화, 데이터 분석 보고서 생성. 에이전트 시장 규모: 2025년 $78억 → 2030년 $526억 예상 (MarketsandMarkets). AI를 "도구"로 쓰는 것에서 AI가 "동료"로 일하는 시대로 전환 중입니다.',
         resources: [
           { label: 'LangGraph 공식 문서', url: 'https://langchain-ai.github.io/langgraph/' },
           { label: 'CrewAI 공식 문서', url: 'https://docs.crewai.com/' },
@@ -723,7 +723,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'AI 시대의 커리어 전략',
-        description: '2026년 AI 관련 직종별 가이드: ① AI 엔지니어 — 가장 수요 높은 역할. LLM 기반 앱(챗봇, RAG, 에이전트) 개발. 필요 스킬: Python, LangChain/LlamaIndex, 프롬프트 엔지니어링, API 통합, Docker. 미국 기준 연봉 $140K~$200K+. ② ML 엔지니어 — 모델 학습·최적화·배포 전문. 수학/통계 기반 필수. PyTorch, MLOps, 데이터 파이프라인. $130K~$220K. ③ 프롬프트 엔지니어 — AI 시스템 품질을 좌우하는 프롬프트 설계 전문가. 비개발자도 진입 가능. ④ AI 프로덕트 매니저 — AI 제품 기획·관리. 기술 이해 + 비즈니스 감각. 핵심 데이터: AI 스킬 보유 직군은 평균 28% 높은 연봉, AI 스킬 2개 이상이면 43% 프리미엄 (Lightcast 2026 조사). 현실적 조언: 이 로드맵을 완료하면 AI 엔지니어 입문 수준에 도달합니다. "AI 엔지니어"가 진입장벽이 가장 낮고 수요가 가장 높습니다. 기존 직무(마케터, 기획자, 디자이너)에 AI 스킬을 더하는 것만으로도 경쟁력이 크게 올라갑니다.',
+        description: '2026년 AI 관련 직종별 가이드: ① AI 엔지니어 — 가장 수요 높은 역할. LLM 기반 앱(챗봇, RAG, 에이전트) 개발. 필요 스킬: Python, LangChain/LlamaIndex, 프롬프트 엔지니어링, API 통합, Docker. 미국 기준 연봉 $140K~$200K+. ② ML 엔지니어 — 모델 학습·최적화·배포 전문. 수학/통계 기반 필수. PyTorch, MLOps, 데이터 파이프라인. $130K~$220K. ③ 프롬프트 엔지니어 — AI 시스템 품질을 좌우하는 프롬프트 설계 전문가. 비개발자도 진입 가능. ④ AI 프로덕트 매니저 — AI 제품 기획·관리. 기술 이해 + 비즈니스 감각. 핵심 데이터: AI 스킬 보유 직군은 평균 28% 높은 연봉, AI 스킬 2개 이상이면 43% 프리미엄 (Lightcast 2025 조사). 현실적 조언: 이 로드맵을 완료하면 AI 엔지니어 입문 수준에 도달합니다. "AI 엔지니어"가 진입장벽이 가장 낮고 수요가 가장 높습니다. 기존 직무(마케터, 기획자, 디자이너)에 AI 스킬을 더하는 것만으로도 경쟁력이 크게 올라갑니다.',
         resources: [
           { label: 'AI 커리어 가이드 (Coursera)', url: 'https://www.coursera.org/resources/ai-learning-roadmap' },
           { label: 'AI Engineer 로드맵', url: 'https://roadmap.sh/ai-engineer' },

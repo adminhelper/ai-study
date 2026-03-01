@@ -29,10 +29,12 @@ export const roadmapData: RoadmapStage[] = [
     topics: [
       {
         title: '생성형 AI란?',
-        description: '구글 검색은 "이미 있는 페이지"를 찾아주고, 생성형 AI는 "없던 콘텐츠"를 만들어줍니다. 예를 들어 "신입사원 환영 이메일 써줘"라고 하면, 검색엔진은 템플릿 사이트를 보여주지만, Claude는 즉시 완성된 이메일을 작성합니다. 핵심 원리는 간단합니다: 인터넷의 방대한 텍스트를 학습한 AI가 "다음에 올 가장 자연스러운 단어"를 계속 예측하는 것입니다. 그래서 글, 코드, 번역, 요약을 할 수 있지만, "정답을 검색"하는 게 아니라 "그럴듯한 답을 생성"하는 것이라는 점을 기억하세요.',
+        description: '구글 검색은 "이미 있는 페이지"를 찾아주고, 생성형 AI는 "없던 콘텐츠"를 만들어줍니다. 예를 들어 "신입사원 환영 이메일 써줘"라고 하면, 검색엔진은 템플릿 사이트를 보여주지만, Claude는 즉시 완성된 이메일을 작성합니다. 핵심 원리는 간단합니다: 인터넷의 방대한 텍스트를 학습한 AI가 "다음에 올 가장 자연스러운 단어"를 계속 예측하는 것입니다. 이때 AI는 글자를 통째로 읽는 게 아니라 "토큰(token)"이라는 조각 단위로 처리합니다. 예를 들어 "안녕하세요"는 여러 개의 토큰으로 쪼개지고, AI는 이 토큰 시퀀스에서 "다음 토큰"을 확률적으로 선택합니다. 마치 문장 빈칸 채우기를 수조 번 연습한 것과 비슷합니다. 그래서 글, 코드, 번역, 요약을 할 수 있지만, "정답을 검색"하는 게 아니라 "가장 확률이 높은 다음 토큰을 생성"하는 것이라는 점을 기억하세요. 이 원리를 이해하면 AI가 왜 때때로 자신있게 틀린 답을 하는지(환각)도 이해할 수 있습니다.',
         resources: [
           { label: 'Google — 생성형 AI 소개', url: 'https://cloud.google.com/ai/generative-ai' },
           { label: 'Anthropic — Claude란?', url: 'https://www.anthropic.com/claude' },
+          { label: '📖 AI 엔지니어링 (칩 후옌) — 파운데이션 모델 이해', url: 'https://product.kyobobook.co.kr/detail/S000217939673' },
+          { label: '📖 프롬프트 엔지니어링 (베리먼) — LLM 작동 원리', url: 'https://product.kyobobook.co.kr/detail/S000218881475' },
         ],
         difficulty: 'beginner',
       },
@@ -59,10 +61,11 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'AI의 한계 — 반드시 알아야 할 3가지',
-        description: 'AI를 100% 신뢰하면 큰 실수를 합니다. 반드시 알아야 할 한계 3가지: ① 환각(Hallucination) — AI가 자신있게 틀린 답을 말합니다. 실제로 "서울 강남구 맛집 전화번호"를 물으면 존재하지 않는 번호를 그럴듯하게 지어냅니다. 숫자·날짜·인용은 반드시 원본을 확인하세요. ② 최신 정보 부재 — 학습 데이터에 컷오프가 있어 "어제 주가"나 "오늘 날씨"를 모릅니다. 최신 정보가 필요하면 Perplexity나 검색 연동 AI를 사용하세요. ③ 편향 — 학습 데이터에 포함된 편견이 출력에 반영될 수 있습니다. 중요한 의사결정에는 AI 답변을 참고만 하고 직접 판단하세요.',
+        description: 'AI를 100% 신뢰하면 큰 실수를 합니다. 반드시 알아야 할 한계 3가지: ① 환각(Hallucination) — AI가 자신있게 틀린 답을 말합니다. 왜 이런 일이 생길까요? AI는 "사실을 검색"하는 게 아니라 "확률적으로 가장 그럴듯한 다음 토큰"을 생성하기 때문입니다. "AI는 속도를 늘추고 다시 생각할 수 없다(LLMs Can\'t Slow Down)" — 한 번 토큰을 생성하기 시작하면 멈추고 확인하는 과정 없이 계속 이어갑니다. 실제로 "서울 강남구 맛집 전화번호"를 물으면 존재하지 않는 번호를 그럴듯하게 지어냅니다. 숫자·날짜·인용은 반드시 원본을 확인하세요. ② 최신 정보 부재 — 학습 데이터에 컷오프가 있어 "어제 주가"나 "오늘 날씨"를 모릅니다. 최신 정보가 필요하면 Perplexity나 검색 연동 AI를 사용하세요. ③ 편향 — 학습 데이터에 포함된 편견이 출력에 반영될 수 있습니다. 중요한 의사결정에는 AI 답변을 참고만 하고 직접 판단하세요. 각 AI 업체(Anthropic, OpenAI)는 RLHF(인간 피드백 기반 강화학습) 같은 기법으로 환각을 줄이려 노력하지만, 근본적으로 "확률 기반 생성" 방식의 한계이므로 항상 검증 습관이 필요합니다.',
         resources: [
           { label: 'Anthropic — Claude 사용 가이드', url: 'https://docs.anthropic.com/en/docs/about-claude/use-case-guides' },
           { label: 'OpenAI — AI 안전성', url: 'https://openai.com/safety' },
+          { label: '📖 프롬프트 엔지니어링 — 환각과 AI의 한계 이해', url: 'https://product.kyobobook.co.kr/detail/S000218881475' },
         ],
         difficulty: 'beginner',
       },
@@ -87,19 +90,22 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'System Prompt — AI에게 역할 부여하기',
-        description: 'System Prompt는 대화 전체에 적용되는 "기본 설정"입니다. 예를 들어 Claude의 System Prompt에 "당신은 한국 세법에 정통한 10년 경력 세무사입니다. 항상 관련 법 조항을 인용하며, 불확실한 내용은 \'확인이 필요합니다\'라고 표시합니다"라고 입력하면, 이후 모든 답변이 세무사 관점에서 나옵니다. 실전 팁: ① 전문 분야 + 경력 연수를 명시하면 답변 깊이가 달라집니다 ② "불확실하면 모른다고 말해줘"를 추가하면 환각이 줄어듭니다 ③ 자주 쓰는 역할은 메모장에 저장해두고 복사해서 사용하세요.',
+        description: 'System Prompt는 대화 전체에 적용되는 "기본 설정"입니다. 왜 이게 가능할까요? 원래 AI 모델(GPT, Claude)은 "인터넷 글을 이어쓰는" 기본 모델(완성 모델)로 시작합니다. 이걸 RLHF(인간 피드백 기반 강화학습)라는 훈련을 거쳐서 "대화에 응하는" 챗 모델로 진화시킵니다. System Prompt는 이 챗 모델에게 "너는 어떤 역할이야"라고 알려주는 장치입니다. 예를 들어 Claude의 System Prompt에 "당신은 한국 세법에 정통한 10년 경력 세무사입니다. 항상 관련 법 조항을 인용하며, 불확실한 내용은 \'확인이 필요합니다\'라고 표시합니다"라고 입력하면, 이후 모든 답변이 세무사 관점에서 나옵니다. 이것을 "정렬세금(Alignment Tax)"이라고 부르는데, RLHF 훈련으로 AI가 대화에 적합해졌지만 원래의 순수 언어 능력이 약간 줄어드는 현상이 있습니다. 그래서 System Prompt를 잘 설계하면 이 손실을 보상하고 더 나은 결과를 얻을 수 있습니다. 실전 팁: ① 전문 분야 + 경력 연수를 명시하면 답변 깊이가 달라집니다 ② "불확실하면 모른다고 말해줘"를 추가하면 환각이 줄어듭니다 ③ 자주 쓰는 역할은 메모장에 저장해두고 복사해서 사용하세요.',
         resources: [
           { label: 'Anthropic — System Prompt 가이드', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts' },
           { label: 'Anthropic Prompt Library', url: 'https://docs.anthropic.com/en/prompt-library' },
+          { label: '📖 프롬프트 엔지니어링 — RLHF와 챗 모델의 원리', url: 'https://product.kyobobook.co.kr/detail/S000218881475' },
         ],
         difficulty: 'beginner',
       },
       {
         title: 'Few-shot & Chain of Thought',
-        description: 'AI의 정확도를 극적으로 높이는 2가지 핵심 기법입니다. Few-shot: 원하는 출력 형태의 예시를 2~3개 먼저 보여주는 것. 예: "다음 형식으로 요약해줘 — 제목: [한 줄 요약], 핵심: [3가지 bullet], 액션: [해야 할 일]. 예시1: [예시 제공]". 예시를 보면 AI가 패턴을 학습하여 일관된 결과를 냅니다. Chain of Thought(CoT): "단계별로 생각해봐"를 추가하는 것. 수학 문제, 논리 추론, 코드 디버깅에서 정답률이 40~70% 향상됩니다. 사용법: 프롬프트 끝에 "step by step으로 풀어줘" 한 줄만 추가하세요.',
+        description: 'AI의 정확도를 극적으로 높이는 2가지 핵심 기법입니다. Few-shot: 원하는 출력 형태의 예시를 2~3개 먼저 보여주는 것. 예: "다음 형식으로 요약해줘 — 제목: [한 줄 요약], 핵심: [3가지 bullet], 액션: [해야 할 일]. 예시1: [예시 제공]". 이것이 효과적인 이유가 있습니다: AI 모델은 학습 시 문서의 패턴을 모사하도록 훈련되었으므로, 예시를 보여주면 "이런 스타일의 문서를 이어쓰는 것"이라고 이해하고 일관된 결과를 냅니다. 프롬프트를 "극본(playwriting)"처럼 생각하세요 — 사용자가 배우에게 대본을 전달하듯, AI에게 "어떤 장면을 연기해야 하는지" 알려주는 것입니다. Chain of Thought(CoT): "단계별로 생각해봐"를 추가하는 것. 수학 문제, 논리 추론, 코드 디버깅에서 정답률이 40~70% 향상됩니다. 추가 팁 — Temperature(온도): AI 응답의 "창의성 다이얼"입니다. 0에 가까울수록 답이 일관되고 정확해지며(팩트 정리, 코드 작성), 1에 가까울수록 다양하고 창의적인 답이 나옵니다(브레인스토밍, 글쓰기). 대부분의 상용 AI(Claude, ChatGPT)는 적절한 Temperature를 자동 설정해줍니다.',
         resources: [
           { label: 'Anthropic — Chain of Thought', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-of-thought' },
           { label: 'Anthropic — 프롬프트 기법 모음', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/techniques' },
+          { label: '📖 프롬프트 엔지니어링 — 프롬프트=극본, Temperature', url: 'https://product.kyobobook.co.kr/detail/S000218881475' },
+          { label: '📖 AI 엔지니어링 — 샘플링과 Temperature 원리', url: 'https://product.kyobobook.co.kr/detail/S000217939673' },
         ],
         difficulty: 'intermediate',
       },
@@ -601,11 +607,12 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'AI API 활용 기초',
-        description: 'AI를 직접 프로그래밍에서 호출하고 싶다면 API를 사용합니다. 시작법: ① Anthropic Console(console.anthropic.com)에서 API 키 발급 ② 가장 간단한 호출 예시(Python): import anthropic / client = anthropic.Anthropic() / message = client.messages.create(model="claude-sonnet-4-20250514", max_tokens=1024, messages=[{"role":"user","content":"안녕!"}]). 핵심 개념: 모델 선택(Sonnet = 빠르고 저렴, Opus = 최고 품질), 토큰(글자 수 단위), 온도(temperature, 창의성 조절). 비용: Sonnet 기준 100만 토큰당 입력 $3 / 출력 $15. 일반적인 요청 1건은 $0.01~$0.05 수준. OpenAI도 비슷한 패턴: from openai import OpenAI / client = OpenAI() / response = client.chat.completions.create(model="gpt-5", ...). 두 API 모두 10줄 이내로 첫 호출이 가능합니다. 실전 활용: 엑셀 데이터 1000건을 자동 분류하거나, 매일 뉴스를 수집해서 요약 리포트를 생성하는 스크립트를 만들 수 있습니다.',
+        description: 'AI를 직접 프로그래밍에서 호출하고 싶다면 API를 사용합니다. 시작법: ① Anthropic Console(console.anthropic.com)에서 API 키 발급 ② 가장 간단한 호출 예시(Python): import anthropic / client = anthropic.Anthropic() / message = client.messages.create(model="claude-sonnet-4-20250514", max_tokens=1024, messages=[{"role":"user","content":"안녕!"}]). 핵심 개념: 모델 선택(Sonnet = 빠르고 저렴, Opus = 최고 품질), 토큰(글자 수 단위), 온도(temperature, 창의성 조절). [Temperature 상세] temperature는 0.0~1.0 범위로 설정합니다. 기술적으로는 AI가 다음 토큰을 선택할 때 확률 분포를 얼마나 "날카롭게"할지 결정합니다. 0.0 = 항상 최고 확률 토큰만 선택(일관된 응답), 1.0 = 더 다양한 토큰에 기회를 줄(창의적 응답). 팩트 정리·코드는 0.0~0.3, 글쓰기·브레인스토밍은 0.7~1.0을 추천. [Structured Output] AI 응답을 JSON 같은 구조화된 형식으로 받을 수 있습니다. 예: "response_format: {type: \'json_object\'}" 설정 시 AI가 항상 유효한 JSON으로 응답. 실전 활용 예: "{name: \'..\', category: \'..\', priority: 1~5}" 형식으로 이메일 1000건 자동 분류. 비용: Sonnet 기준 100만 토큰당 입력 $3 / 출력 $15. 일반적인 요청 1건은 $0.01~$0.05 수준. [Streaming] 실시간 응답을 원하면 stream=True로 설정하면 토큰이 생성되는 대로 하나씩 전달됩니다 — ChatGPT에서 글자가 하나씩 나타나는 효과가 바로 이것. OpenAI도 비슷한 패턴: from openai import OpenAI / client = OpenAI() / response = client.chat.completions.create(model="gpt-5", ...). 두 API 모두 10줄 이내로 첫 호출이 가능합니다.',
         resources: [
           { label: 'Anthropic API 문서', url: 'https://docs.anthropic.com/en/api' },
           { label: 'OpenAI API 문서', url: 'https://platform.openai.com/docs' },
           { label: 'Anthropic Python SDK', url: 'https://github.com/anthropics/anthropic-sdk-python' },
+          { label: '📖 AI 엔지니어링 — 인퍼런스 최적화와 API 활용', url: 'https://product.kyobobook.co.kr/detail/S000217939673' },
         ],
         difficulty: 'intermediate',
       },
@@ -635,10 +642,11 @@ export const roadmapData: RoadmapStage[] = [
     topics: [
       {
         title: 'RAG란 무엇인가',
-        description: 'RAG(Retrieval-Augmented Generation)는 AI의 환각 문제를 해결하는 가장 실용적인 방법입니다. 원리: ① 당신의 문서를 작은 조각(chunk)으로 나눔 ② 각 조각을 벡터(숫자 배열)로 변환하여 저장 ③ 질문이 들어오면 가장 관련 있는 조각을 검색 ④ 검색된 조각을 AI에게 "참고 자료"로 전달 → 정확한 답변 생성. 비유하면: 시험을 볼 때 교과서를 통째로 외우는 대신(기존 AI), 관련 페이지를 펼쳐놓고 답을 쓰는 것(RAG)입니다. Before/After — ❌ RAG 없이: "우리 회사 환불 정책 알려줘" → AI가 일반적인 환불 정책을 지어냄 ✅ RAG 적용: 회사 약관 PDF를 벡터 DB에 저장 → 해당 조항을 정확히 인용하며 답변. 실전 활용: 사내 문서 검색 챗봇, 고객 FAQ 자동 응답, 법률/의료 문서 분석. RAG 없는 AI는 학습 데이터에만 의존하지만, RAG가 있으면 최신 정보와 비공개 데이터를 실시간으로 활용할 수 있습니다.',
+        description: 'RAG(Retrieval-Augmented Generation)는 AI의 환각 문제를 해결하는 가장 실용적인 방법입니다. 원리: ① 당신의 문서를 작은 조각(chunk)으로 나눔 ② 각 조각을 벡터(숫자 배열)로 변환하여 저장 ③ 질문이 들어오면 가장 관련 있는 조각을 검색 ④ 검색된 조각을 AI에게 "참고 자료"로 전달 → 정확한 답변 생성. [청킹(Chunking) 전략] 문서를 어떻게 자르느냐가 RAG 품질을 결정합니다. 청크 크기: 200~500 토큰이 적정 — 너무 크면 관련 없는 내용이 섞이고, 너무 작으면 맥락이 끊깁니다. 청크 겹침(overlap): 청크간 10~20% 겹치게 자르면 문맥 손실을 방지할 수 있습니다. [임베딩(Embedding)] 텍스트를 숫자 벡터로 변환하는 과정입니다. "사과"와 "배"는 가까운 벡터값을 가지고, "사과"와 "자동차"는 먼 값을 가집니다. 주요 임베딩 모델: OpenAI text-embedding-3-small(저렴, 성능 좋음), Cohere embed-v3(다국어 강점). [고급 검색] 하이브리드 검색(벡터 검색 + 키워드 검색 결합)이 벡터만 쓰는 것보다 정확도가 높고, 리랭킹(Reranking)으로 검색 결과를 재정렬하면 품질이 더 올라갑니다. Before/After — ❌ RAG 없이: "우리 회사 환불 정책 알려줘" → AI가 일반적인 환불 정책을 지어냄 ✅ RAG 적용: 회사 약관 PDF를 벡터 DB에 저장 → 해당 조항을 정확히 인용하며 답변.',
         resources: [
           { label: 'LangChain RAG 튜토리얼', url: 'https://python.langchain.com/docs/tutorials/rag/' },
           { label: 'RAG 무료 강좌 (Active Loop)', url: 'https://learn.activeloop.ai/courses/rag' },
+          { label: '📖 AI 엔지니어링 — RAG, 임베딩, 청킹 전략 상세', url: 'https://product.kyobobook.co.kr/detail/S000217939673' },
         ],
         difficulty: 'intermediate',
       },
@@ -693,11 +701,12 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'Tool Use — AI에게 도구 쥐여주기',
-        description: 'AI 에이전트의 진짜 힘은 "도구 사용(Tool Use)" 능력에서 나옵니다. Tool Use란: AI가 텍스트 생성 외에 웹 검색, API 호출, DB 조회, 파일 읽기/쓰기를 직접 수행하는 것. Claude의 Tool Use 예시: Anthropic API에서 tools 파라미터로 함수를 정의하면, AI가 필요할 때 해당 함수를 "호출"합니다. 예: 날씨 조회 도구를 정의 → 사용자가 "서울 날씨 알려줘" → AI가 get_weather("Seoul")을 호출 → 실제 날씨 데이터로 답변. PART 2에서 배운 MCP와의 연결: MCP 서버 = AI가 사용할 수 있는 도구 모음. Claude Code가 파일을 읽고, 명령을 실행하고, Git을 다루는 것이 바로 Tool Use입니다. 실전 활용 패턴: ① 검색 에이전트: 웹 검색 → 결과 분석 → 답변 ② 데이터 에이전트: DB 조회 → 시각화 → 보고서 ③ 코딩 에이전트: 코드 읽기 → 수정 → 테스트 실행 → 결과 확인. 현재 기업에서 가장 수요가 높은 스킬 중 하나입니다.',
+        description: 'AI 에이전트의 진짜 힘은 "도구 사용(Tool Use)" 능력에서 나옵니다. Tool Use란: AI가 텍스트 생성 외에 웹 검색, API 호출, DB 조회, 파일 읽기/쓰기를 직접 수행하는 것. [에이전트 루프 상세] 에이전트는 단순한 한 번의 질의응답이 아니라 "루프(loop)"를 동니다: ① 사용자 입력 → ② AI가 "도구를 쓸지, 직접 답할지" 판단 → ③ 도구 호출(API 호출 발생) → ④ 도구 결과를 AI가 읽음 → ⑤ 추가 도구가 필요하면 ②로 돌아감 / 충분하면 최종 답변 생성. 이 루프가 Claude Code가 "코드 읽기 → 수정 → 테스트 → 다시 수정"하는 원리입니다. Claude의 Tool Use 예시: Anthropic API에서 tools 파라미터로 함수를 정의하면, AI가 필요할 때 해당 함수를 "호출"합니다. 예: 날씨 조회 도구를 정의 → 사용자가 "서울 날씨 알려줘" → AI가 get_weather("Seoul")를 호출 → 실제 날씨 데이터로 답변. PART 2에서 배운 MCP와의 연결: MCP 서버 = AI가 사용할 수 있는 도구 모음. 실전 활용 패턴: ① 검색 에이전트: 웹 검색 → 결과 분석 → 답변 ② 데이터 에이전트: DB 조회 → 시각화 → 보고서 ③ 코딩 에이전트: 코드 읽기 → 수정 → 테스트 실행 → 결과 확인. 현재 기업에서 가장 수요가 높은 스킬 중 하나입니다.',
         resources: [
           { label: 'Anthropic Tool Use 가이드', url: 'https://docs.anthropic.com/en/docs/build-with-claude/tool-use/overview' },
           { label: 'OpenAI Function Calling', url: 'https://platform.openai.com/docs/guides/function-calling' },
           { label: 'MCP 공식 문서', url: 'https://modelcontextprotocol.io/' },
+          { label: '📖 AI 엔지니어링 — 에이전트 설계와 도구 사용', url: 'https://product.kyobobook.co.kr/detail/S000217939673' },
         ],
         difficulty: 'advanced',
       },
@@ -723,10 +732,11 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'AI 시대의 커리어 전략',
-        description: '2026년 AI 관련 직종별 가이드: ① AI 엔지니어 — 가장 수요 높은 역할. LLM 기반 앱(챗봇, RAG, 에이전트) 개발. 필요 스킬: Python, LangChain/LlamaIndex, 프롬프트 엔지니어링, API 통합, Docker. 미국 기준 연봉 $140K~$200K+. ② ML 엔지니어 — 모델 학습·최적화·배포 전문. 수학/통계 기반 필수. PyTorch, MLOps, 데이터 파이프라인. $130K~$220K. ③ 프롬프트 엔지니어 — AI 시스템 품질을 좌우하는 프롬프트 설계 전문가. 비개발자도 진입 가능. ④ AI 프로덕트 매니저 — AI 제품 기획·관리. 기술 이해 + 비즈니스 감각. 핵심 데이터: AI 스킬 보유 직군은 평균 28% 높은 연봉, AI 스킬 2개 이상이면 43% 프리미엄 (Lightcast 2025 조사). 현실적 조언: 이 로드맵을 완료하면 AI 엔지니어 입문 수준에 도달합니다. "AI 엔지니어"가 진입장벽이 가장 낮고 수요가 가장 높습니다. 기존 직무(마케터, 기획자, 디자이너)에 AI 스킬을 더하는 것만으로도 경쟁력이 크게 올라갑니다.',
+        description: '2026년 AI 관련 직종별 가이드: ① AI 엔지니어 — 가장 수요 높은 역할. LLM 기반 앱(챗봇, RAG, 에이전트) 개발. AI 엔지니어링 스택은 3계층으로 나뉘니다 — 애플리케이션 계층(프롬프트 설계, RAG, 에이전트), 모델 계층(모델 선택·파인튜닝·평가), 인프라 계층(API 관리, 데이터 파이프라인, 모니터링). 필요 스킬: Python, LangChain/LlamaIndex, 프롬프트 엔지니어링, API 통합, Docker. 미국 기준 연봉 $140K~$200K+. ② ML 엔지니어 — 모델 학습·최적화·배포 전문. 수학/통계 기반 필수. $130K~$220K. ③ 프롬프트 엔지니어 — AI 시스템 품질을 좌우하는 프롬프트 설계 전문가. 비개발자도 진입 가능. ④ AI 프로덕트 매니저 — AI 제품 기획·관리. 기술 이해 + 비즈니스 감각. [파인튜닝이란?] 대부분의 AI 업무는 기존 모델을 "그대로" 쓰지만, 특수 분야(의료, 법률, 특정 업무)에서는 모델을 추가 학습시키는 "파인튜닝(Fine-tuning)"이 필요합니다. 예: 회사 내부 용어를 이해하는 고객지원 AI, 특정 코딩 스타일을 따르는 코드 생성기. 단, 파인튜닝은 비용과 데이터가 많이 필요하므로 대부분은 프롬프트 엔지니어링 + RAG로 충분합니다. 핵심 데이터: AI 스킬 보유 직군은 평균 28% 높은 연봉, AI 스킬 2개 이상이면 43% 프리미엄 (Lightcast 2025 조사). 현실적 조언: 이 로드맵을 완료하면 AI 엔지니어 입문 수준에 도달합니다. 기존 직무(마케터, 기획자, 디자이너)에 AI 스킬을 더하는 것만으로도 경쟁력이 크게 올라갑니다.',
         resources: [
           { label: 'AI 커리어 가이드 (Coursera)', url: 'https://www.coursera.org/resources/ai-learning-roadmap' },
           { label: 'AI Engineer 로드맵', url: 'https://roadmap.sh/ai-engineer' },
+          { label: '📖 AI 엔지니어링 — AI 엔지니어 커리어와 스택', url: 'https://product.kyobobook.co.kr/detail/S000217939673' },
         ],
         difficulty: 'beginner',
       },

@@ -40,7 +40,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: '주요 AI 서비스 비교',
-        description: '2026년 초 기준 AI 경쟁이 어느 때보다 치열합니다. 주요 서비스 비교: Claude (Opus 4.6) — 코딩·추론·긴 문서 분석 최강, 1M 토큰 컨텍스트(약 750K 단어). SWE-bench 코딩 벤치마크 1위. GPT-5 (ChatGPT) — 수학·범용 추론·이미지 생성(DALL-E) 강점, 400K 컨텍스트. 가장 큰 생태계. Gemini 3 — 구글 서비스(Gmail, Docs, Search) 완전 통합 + Deep Think 추론. 가성비 최강. Perplexity — 실시간 웹 검색 + AI 답변 결합, 최신 정보에 강점. DeepSeek — 오픈소스 최강, 무료 사용 가능, 추론 성능 세계 최정상급. 선택 기준: ① 코딩·문서 분석 → Claude, ② 범용·이미지 생성 → ChatGPT, ③ 구글 연동 → Gemini, ④ 검색 중심 → Perplexity, ⑤ 비용 민감 → DeepSeek. 무료 플랜으로 각각 하루씩 써보고 결정하세요.',
+        description: '2026년 초 기준 AI 경쟁이 어느 때보다 치열합니다. 주요 서비스 비교: Claude (Opus 4.6) — 코딩·추론·긴 문서 분석 최강, 1M 토큰 컨텍스트(약 750K 단어). SWE-bench 코딩 벤치마크 1위. GPT-5.2 (ChatGPT) — 수학·범용 추론·이미지 생성(DALL-E) 강점, 400K 컨텍스트. 가장 큰 생태계. Gemini 3.1 Pro — 구글 서비스(Gmail, Docs, Search) 완전 통합 + Deep Think 추론 모드. 가성비 최강. Perplexity — 실시간 웹 검색 + AI 답변 결합, 최신 정보에 강점. DeepSeek — 오픈소스 최강, 무료 사용 가능, 추론 성능 세계 최정상급. 선택 기준: ① 코딩·문서 분석 → Claude, ② 범용·이미지 생성 → ChatGPT, ③ 구글 연동 → Gemini, ④ 검색 중심 → Perplexity, ⑤ 비용 민감 → DeepSeek. 무료 플랜으로 각각 하루씩 써보고 결정하세요.',
         resources: [
           { label: 'Claude', url: 'https://claude.ai' },
           { label: 'ChatGPT', url: 'https://chat.openai.com' },
@@ -125,7 +125,7 @@ export const roadmapData: RoadmapStage[] = [
     num: '03',
     phase: 'AI 기초',
     title: 'AI 일상 활용',
-    description: 'McKinsey 보고서에 따르면 AI를 업무에 활용하는 직장인은 평균 40%의 생산성 향상을 경험합니다. 이메일, 리서치, 문서 작업, 번역까지 — 오늘 바로 적용할 수 있는 실전 활용법을 배웁니다.',
+    description: 'McKinsey 연구에 따르면 AI를 업무에 활용하는 직장인은 약 40%의 생산성 향상을 경험합니다. 이메일, 리서치, 문서 작업, 번역까지 — 오늘 바로 적용할 수 있는 실전 활용법을 배웁니다.',
     duration: '1~2주',
     topics: [
       {
@@ -226,7 +226,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'Copilot / Cursor와 뭐가 다른가',
-        description: '2026년 기준, 세 도구의 포지셔닝이 더 명확해졌습니다. GitHub Copilot ($10~19/월) — GPT-5·Claude·Gemini 모델 선택 가능, 모든 IDE에서 작동. 코딩 중 자동완성 + Agent Mode 추가. GitHub 생태계(이슈, PR)와의 통합이 최대 강점. Cursor ($20/월) — Claude Opus 기반 AI-네이티브 IDE. VS Code를 포크한 전용 에디터에서 코드베이스 전체를 이해하고 대화형으로 수정. 개발자가 주도권을 쥐고 AI와 협업하는 방식. Claude Code (사용량 기반) — 터미널에서 프로젝트 전체를 자율적으로 분석·수정·테스트·배포. 가장 높은 자율성. Opus 4.6 기준 SWE-bench 80.8%로 코딩 벤치마크 최정상급. 핵심 차이: Copilot = "빠른 자동완성", Cursor = "대화형 페어 프로그래밍", Claude Code = "자율 AI 개발자". 많은 시니어 개발자들은 Cursor(일상 코딩)와 Claude Code(복잡한 작업)를 병행합니다.',
+        description: '2026년 기준, 세 도구의 포지셔닝이 더 명확해졌습니다. GitHub Copilot ($10/월 Pro, $19/월 Business) — GPT-5.2·Claude·Gemini 모델 선택 가능, 모든 IDE에서 작동. 코딩 중 자동완성 + Agent Mode 추가. GitHub 생태계(이슈, PR)와의 통합이 최대 강점. Cursor ($20/월) — GPT·Claude·Gemini 등 멀티모델 지원 AI-네이티브 IDE. VS Code를 포크한 전용 에디터에서 코드베이스 전체를 이해하고 대화형으로 수정. 개발자가 주도권을 쥐고 AI와 협업하는 방식. Claude Code (사용량 기반) — 터미널에서 프로젝트 전체를 자율적으로 분석·수정·테스트·배포. 가장 높은 자율성. Opus 4.6 기준 SWE-bench Verified 80.8%로 코딩 벤치마크 최정상급. 핵심 차이: Copilot = "빠른 자동완성", Cursor = "대화형 페어 프로그래밍", Claude Code = "자율 AI 개발자". 많은 시니어 개발자들은 Cursor(일상 코딩)와 Claude Code(복잡한 작업)를 병행합니다.',
         resources: [
           { label: 'GitHub Copilot', url: 'https://github.com/features/copilot' },
           { label: 'Cursor', url: 'https://cursor.sh' },
@@ -607,7 +607,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'AI API 활용 기초',
-        description: 'AI를 직접 프로그래밍에서 호출하고 싶다면 API를 사용합니다. 시작법: ① Anthropic Console(console.anthropic.com)에서 API 키 발급 ② 가장 간단한 호출 예시(Python): import anthropic / client = anthropic.Anthropic() / message = client.messages.create(model="claude-sonnet-4-20250514", max_tokens=1024, messages=[{"role":"user","content":"안녕!"}]). 핵심 개념: 모델 선택(Sonnet = 빠르고 저렴, Opus = 최고 품질), 토큰(글자 수 단위), 온도(temperature, 창의성 조절). [Temperature 상세] temperature는 0.0~1.0 범위로 설정합니다. 기술적으로는 AI가 다음 토큰을 선택할 때 확률 분포를 얼마나 "날카롭게"할지 결정합니다. 0.0 = 항상 최고 확률 토큰만 선택(일관된 응답), 1.0 = 더 다양한 토큰에 기회를 줄(창의적 응답). 팩트 정리·코드는 0.0~0.3, 글쓰기·브레인스토밍은 0.7~1.0을 추천. [Structured Output] AI 응답을 JSON 같은 구조화된 형식으로 받을 수 있습니다. 예: "response_format: {type: \'json_object\'}" 설정 시 AI가 항상 유효한 JSON으로 응답. 실전 활용 예: "{name: \'..\', category: \'..\', priority: 1~5}" 형식으로 이메일 1000건 자동 분류. 비용: Sonnet 기준 100만 토큰당 입력 $3 / 출력 $15. 일반적인 요청 1건은 $0.01~$0.05 수준. [Streaming] 실시간 응답을 원하면 stream=True로 설정하면 토큰이 생성되는 대로 하나씩 전달됩니다 — ChatGPT에서 글자가 하나씩 나타나는 효과가 바로 이것. OpenAI도 비슷한 패턴: from openai import OpenAI / client = OpenAI() / response = client.chat.completions.create(model="gpt-5", ...). 두 API 모두 10줄 이내로 첫 호출이 가능합니다.',
+        description: 'AI를 직접 프로그래밍에서 호출하고 싶다면 API를 사용합니다. 시작법: ① Anthropic Console(console.anthropic.com)에서 API 키 발급 ② 가장 간단한 호출 예시(Python): import anthropic / client = anthropic.Anthropic() / message = client.messages.create(model="claude-sonnet-4-20250514", max_tokens=1024, messages=[{"role":"user","content":"안녕!"}]). 핵심 개념: 모델 선택(Sonnet = 빠르고 저렴, Opus = 최고 품질), 토큰(글자 수 단위), 온도(temperature, 창의성 조절). [Temperature 상세] temperature는 0.0~1.0 범위로 설정합니다. 기술적으로는 AI가 다음 토큰을 선택할 때 확률 분포를 얼마나 "날카롭게"할지 결정합니다. 0.0 = 항상 최고 확률 토큰만 선택(일관된 응답), 1.0 = 더 다양한 토큰에 기회를 줄(창의적 응답). 팩트 정리·코드는 0.0~0.3, 글쓰기·브레인스토밍은 0.7~1.0을 추천. [Structured Output] AI 응답을 JSON 같은 구조화된 형식으로 받을 수 있습니다. 예: "response_format: {type: \'json_object\'}" 설정 시 AI가 항상 유효한 JSON으로 응답. 실전 활용 예: "{name: \'..\', category: \'..\', priority: 1~5}" 형식으로 이메일 1000건 자동 분류. 비용: Sonnet 기준 100만 토큰당 입력 $3 / 출력 $15. 일반적인 요청 1건은 $0.01~$0.05 수준. [Streaming] 실시간 응답을 원하면 stream=True로 설정하면 토큰이 생성되는 대로 하나씩 전달됩니다 — ChatGPT에서 글자가 하나씩 나타나는 효과가 바로 이것. OpenAI도 비슷한 패턴: from openai import OpenAI / client = OpenAI() / response = client.chat.completions.create(model="gpt-5.2", ...). 두 API 모두 10줄 이내로 첫 호출이 가능합니다.',
         resources: [
           { label: 'Anthropic API 문서', url: 'https://docs.anthropic.com/en/api' },
           { label: 'OpenAI API 문서', url: 'https://platform.openai.com/docs' },
@@ -618,7 +618,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'AI 에이전트 — 다음 단계',
-        description: '2026년, AI 에이전트는 더 이상 실험이 아닌 실전 기술입니다. Gartner에 따르면 2026년 말까지 엔터프라이즈 앱의 40%가 AI 에이전트를 탑재할 전망입니다. AI 에이전트란: 스스로 계획하고 → 도구를 사용하고 → 결과를 검증하고 → 다음 행동을 결정하는 자율적 시스템. Claude Code 자체가 대표적인 AI 에이전트입니다. 2026년 현재 주요 에이전트 프레임워크: ① LangGraph — 기업 환경 1위 (월 3,400만 다운로드), 상태 관리가 핵심 강점. 복잡한 분기 워크플로우에 최적 ② CrewAI — 역할 기반 멀티 에이전트 협업, 직관적 API. 빠른 프로토타이핑에 추천 ③ OpenAI Agents SDK — OpenAI 공식 에이전트 프레임워크, 간결한 설계 ④ Google ADK — Gemini + Google 서비스 연동 강점. 실전 사례: 고객 문의 자동 응답, 코드 리뷰 자동화, 데이터 분석 보고서 생성. 에이전트 시장 규모: 2025년 $78억 → 2030년 $526억 예상 (MarketsandMarkets). AI를 "도구"로 쓰는 것에서 AI가 "동료"로 일하는 시대로 전환 중입니다.',
+        description: '2026년, AI 에이전트는 더 이상 실험이 아닌 실전 기술입니다. Gartner는 향후 수년 내 대다수 엔터프라이즈 앱이 AI 에이전트를 탑재할 것으로 전망합니다. AI 에이전트란: 스스로 계획하고 → 도구를 사용하고 → 결과를 검증하고 → 다음 행동을 결정하는 자율적 시스템. Claude Code 자체가 대표적인 AI 에이전트입니다. 2026년 현재 주요 에이전트 프레임워크: ① LangGraph — LangChain 생태계 기반, 기업 환경 채택 1위, 상태 관리가 핵심 강점. 복잡한 분기 워크플로우에 최적 ② CrewAI — 역할 기반 멀티 에이전트 협업, 직관적 API. 빠른 프로토타이핑에 추천 ③ OpenAI Agents SDK — OpenAI 공식 에이전트 프레임워크, 간결한 설계 ④ Google ADK — Gemini + Google 서비스 연동 강점. 실전 사례: 고객 문의 자동 응답, 코드 리뷰 자동화, 데이터 분석 보고서 생성. 에이전트 시장 규모: 2025년 $78억 → 2030년 $526억 예상 (MarketsandMarkets). AI를 "도구"로 쓰는 것에서 AI가 "동료"로 일하는 시대로 전환 중입니다.',
         resources: [
           { label: 'LangGraph 공식 문서', url: 'https://langchain-ai.github.io/langgraph/' },
           { label: 'CrewAI 공식 문서', url: 'https://docs.crewai.com/' },
@@ -652,7 +652,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: '벡터 데이터베이스 비교',
-        description: '벡터 데이터베이스는 RAG의 핵심 인프라입니다. 텍스트를 숫자 벡터로 변환한 뒤, "의미가 비슷한" 벡터를 빠르게 검색합니다. 2026년 주요 벡터 DB 비교: ① Chroma — 로컬 개발에 최적. pip install chromadb 한 줄로 시작, 무료 오픈소스. 학습·프로토타입에 강력 추천 ② Pinecone — 완전 관리형 클라우드 서비스. 설정 없이 바로 사용, 무료 티어 제공. 프로덕션 RAG에 추천 ③ Qdrant — 고성능 오픈소스(Rust 기반). Docker로 셀프호스팅, <5ms 검색 속도, 필터링 강력 ④ Weaviate — 멀티모달(텍스트+이미지) 검색 지원, GraphQL API ⑤ pgvector — PostgreSQL 확장. 기존 DB 인프라를 그대로 활용. 선택 기준: 학습/프로토타입 → Chroma, SaaS 프로덕션 → Pinecone, 셀프호스팅 고성능 → Qdrant, 기존 PostgreSQL 활용 → pgvector. 입문자는 Chroma로 시작해서 프로덕션 시 Pinecone이나 Qdrant로 전환하는 패턴을 추천합니다.',
+        description: '벡터 데이터베이스는 RAG의 핵심 인프라입니다. 텍스트를 숫자 벡터로 변환한 뒤, "의미가 비슷한" 벡터를 빠르게 검색합니다. 2026년 주요 벡터 DB 비교: ① Chroma — 로컬 개발에 최적. pip install chromadb 한 줄로 시작, 무료 오픈소스. 학습·프로토타입에 강력 추천 ② Pinecone — 완전 관리형 클라우드 서비스. 설정 없이 바로 사용, 무료 티어 제공. 프로덕션 RAG에 추천 ③ Qdrant — 고성능 오픈소스(Rust 기반). Docker로 셀프호스팅, <5ms 검색 속도, 필터링 강력 ④ Weaviate — 멀티모달(텍스트+이미지) 검색 지원, GraphQL API ⑤ pgvector — PostgreSQL 확장. 기존 DB 인프라를 그대로 활용 ⑥ FAISS — Meta가 만든 고속 유사도 검색 라이브러리. GPU 가속 지원, 대규모 벡터에서 초고속 검색. 연구/실험에 인기 ⑦ LanceDB — 서버리스 벡터 DB. 로컬 파일 기반이라 설치가 간편하고, 멀티모달(이미지+텍스트) 검색 지원. 선택 기준: 학습/프로토타입 → Chroma, SaaS 프로덕션 → Pinecone, 셀프호스팅 고성능 → Qdrant, 기존 PostgreSQL 활용 → pgvector, 연구/대규모 실험 → FAISS, 로컬 서버리스 → LanceDB. 입문자는 Chroma로 시작해서 프로덕션 시 Pinecone이나 Qdrant로 전환하는 패턴을 추천합니다.',
         resources: [
           { label: 'Chroma 공식 문서', url: 'https://docs.trychroma.com/' },
           { label: 'Pinecone 시작 가이드', url: 'https://docs.pinecone.io/guides/get-started/overview' },
@@ -662,7 +662,7 @@ export const roadmapData: RoadmapStage[] = [
       },
       {
         title: 'LangChain vs LlamaIndex — 실전 선택 가이드',
-        description: 'RAG 구축의 양대 프레임워크입니다. 2026년 현재 "둘 다 쓰는 것"이 엔터프라이즈 표준이 되었습니다. LangChain — "만능 오케스트레이터". 2025년 10월 v1.0 출시, 모듈화된 패키지 구조(langchain-core, langchain-openai, langchain-anthropic 등)로 진화. RAG뿐 아니라 에이전트, 체인, 도구 연결까지. 월 3,400만 다운로드로 기업 채택 1위. LlamaIndex — "데이터 전문가". 문서 로딩·파싱·인덱싱에 특화. 복잡한 문서 구조(PDF 표, 이미지 포함)를 처리하는 데 강점. 고급 검색 기법(하이브리드 검색, 리랭킹) 내장. 실전 선택 가이드: ① RAG만 필요 → LlamaIndex로 시작 ② RAG + 에이전트 + 도구 연결 → LangChain ③ 복잡한 문서(PDF 표, 이미지) → LlamaIndex ④ 기업 프로덕션 → LangChain + LangSmith(모니터링). 엔터프라이즈 패턴: LlamaIndex로 데이터 인덱싱 → LangGraph 에이전트에 도구로 연결. 둘 다 Python 10줄 이내로 기본 RAG를 구축할 수 있습니다.',
+        description: 'RAG 구축의 양대 프레임워크입니다. 2026년 현재 "둘 다 쓰는 것"이 엔터프라이즈 표준이 되었습니다. LangChain — "만능 오케스트레이터". 2025년 10월 v1.0 출시, 모듈화된 패키지 구조(langchain-core, langchain-openai, langchain-anthropic 등)로 진화. RAG뿐 아니라 에이전트, 체인, 도구 연결까지. 기업 채택률 1위. LlamaIndex — "데이터 전문가". 문서 로딩·파싱·인덱싱에 특화. 복잡한 문서 구조(PDF 표, 이미지 포함)를 처리하는 데 강점. 고급 검색 기법(하이브리드 검색, 리랭킹) 내장. 실전 선택 가이드: ① RAG만 필요 → LlamaIndex로 시작 ② RAG + 에이전트 + 도구 연결 → LangChain ③ 복잡한 문서(PDF 표, 이미지) → LlamaIndex ④ 기업 프로덕션 → LangChain + LangSmith(모니터링). 엔터프라이즈 패턴: LlamaIndex로 데이터 인덱싱 → LangGraph 에이전트에 도구로 연결. 둘 다 Python 10줄 이내로 기본 RAG를 구축할 수 있습니다.',
         resources: [
           { label: 'LangChain 공식 문서', url: 'https://python.langchain.com/docs/introduction/' },
           { label: 'LlamaIndex 공식 문서', url: 'https://docs.llamaindex.ai/' },
@@ -677,12 +677,12 @@ export const roadmapData: RoadmapStage[] = [
     num: '13',
     phase: 'AI 심화',
     title: 'AI 에이전트 개발',
-    description: '2026년 가장 뜨거운 AI 기술은 단연 "에이전트"입니다. 시장 규모가 2025년 $78억에서 2030년 $526억으로 성장 전망. 단순한 챗봇을 넘어, 스스로 계획하고 도구를 사용하고 작업을 완수하는 AI 시스템을 직접 만들어봅니다.',
+    description: '2026년 가장 뜨거운 AI 기술은 단연 "에이전트"입니다. 시장 규모가 2025년 $78억에서 2030년 $526억으로 성장 전망(MarketsandMarkets 추정). 단순한 챗봇을 넘어, 스스로 계획하고 도구를 사용하고 작업을 완수하는 AI 시스템을 직접 만들어봅니다.',
     duration: '3~4주',
     topics: [
       {
         title: '에이전트 프레임워크 비교',
-        description: '2026년 주요 AI 에이전트 프레임워크를 비교합니다. ① LangGraph — LangChain 생태계의 에이전트 프레임워크. 기업 환경 1위 (월 3,400만 다운로드). 상태 관리가 핵심 강점: 복잡한 멀티스텝 워크플로우를 그래프 구조로 정의. "고객 문의 → 분류 → 담당자 라우팅 → 자동 답변" 같은 파이프라인에 최적. 학습 곡선이 높지만 프로덕션에 가장 안정적. ② CrewAI — "역할 기반 협업"이 콘셉트. Researcher(조사), Writer(작성), Editor(검수) 역할을 정의하면 AI가 역할별로 협업. 코드가 직관적이라 러닝커브가 낮음. 단, 토큰 오버헤드가 약 3배라 프로덕션 비용 주의. ③ OpenAI Agents SDK — OpenAI 공식 에이전트 프레임워크. 가장 간결한 API 설계. OpenAI 모델과의 통합이 자연스러움. ④ Google ADK — Google의 에이전트 개발 키트. Gemini 모델과 Google 서비스 연동에 강점. 처음 시작한다면: CrewAI(가장 쉬움) → LangGraph(프로덕션 수준) 순서를 추천합니다.',
+        description: '2026년 주요 AI 에이전트 프레임워크를 비교합니다. ① LangGraph — LangChain 생태계의 에이전트 프레임워크. 기업 환경 채택 1위. 상태 관리가 핵심 강점: 복잡한 멀티스텝 워크플로우를 그래프 구조로 정의. "고객 문의 → 분류 → 담당자 라우팅 → 자동 답변" 같은 파이프라인에 최적. 학습 곡선이 높지만 프로덕션에 가장 안정적. ② CrewAI — "역할 기반 협업"이 콘셉트. Researcher(조사), Writer(작성), Editor(검수) 역할을 정의하면 AI가 역할별로 협업. 코드가 직관적이라 러닝커브가 낮음. 단, 토큰 오버헤드가 약 3배라 프로덕션 비용 주의. ③ OpenAI Agents SDK — OpenAI 공식 에이전트 프레임워크. 가장 간결한 API 설계. OpenAI 모델과의 통합이 자연스러움. ④ Google ADK — Google의 에이전트 개발 키트. Gemini 모델과 Google 서비스 연동에 강점. 처음 시작한다면: CrewAI(가장 쉬움) → LangGraph(프로덕션 수준) 순서를 추천합니다.',
         resources: [
           { label: 'LangGraph 공식 문서', url: 'https://langchain-ai.github.io/langgraph/' },
           { label: 'CrewAI 공식 문서', url: 'https://docs.crewai.com/' },
@@ -709,6 +709,15 @@ export const roadmapData: RoadmapStage[] = [
           { label: '📖 AI 엔지니어링 — 에이전트 설계와 도구 사용', url: 'https://product.kyobobook.co.kr/detail/S000217939673' },
         ],
         difficulty: 'advanced',
+      },
+      {
+        title: 'ReAct 프롬프팅 — 에이전트의 사고 패턴',
+        description: 'ReAct(Reasoning + Acting)는 AI 에이전트의 핵심 사고 패턴입니다. 일반적인 프롬프팅이 "질문 → 답변"의 단방향이라면, ReAct는 "생각(Thought) → 행동(Action) → 관찰(Observation) → 다시 생각"의 루프를 돕니다. 예를 들어 "서울 날씨를 알려줘"라는 질문에: Thought — "날씨 정보가 필요하니 검색 도구를 써야겠다" → Action — search("서울 날씨") → Observation — "서울 현재 15°C, 맑음" → Thought — "정보를 얻었으니 사용자에게 답변하자" → 최종 답변. Chain of Thought(CoT)와의 차이: CoT는 "생각만" 하지만, ReAct는 "생각+행동"을 번갈아 수행합니다. 이것이 왜 중요한가? LangGraph, CrewAI, OpenAI Agents SDK 등 모든 에이전트 프레임워크의 기본 작동 원리가 ReAct 패턴입니다. PART 2에서 배운 Claude Code가 "코드 읽기 → 수정 계획 → 수정 실행 → 테스트 확인 → 다시 수정"하는 것도 ReAct 루프입니다. 이 패턴을 이해하면 에이전트 설계가 직관적으로 이해됩니다.',
+        resources: [
+          { label: 'ReAct 논문 (Yao et al.)', url: 'https://arxiv.org/abs/2210.03629' },
+          { label: 'LangChain ReAct Agent', url: 'https://python.langchain.com/docs/how_to/migrate_agent/' },
+        ],
+        difficulty: 'intermediate',
       },
     ],
   },
@@ -749,6 +758,82 @@ export const roadmapData: RoadmapStage[] = [
           { label: 'AI 프로젝트 로드맵 (GitHub)', url: 'https://github.com/krishnaik06/Complete-RoadMap-To-Learn-AI' },
         ],
         difficulty: 'intermediate',
+      },
+    ],
+  },
+  {
+    id: 'opensource-ai',
+    num: '15',
+    phase: 'AI 심화',
+    title: '오픈소스 AI',
+    description: '클로즈드 모델(ChatGPT, Claude)만 쓰면 비용과 데이터 프라이버시 걱정이 생깁니다. 오픈소스 AI로 무료·로컬·커스터마이징 가능한 AI 세계를 경험하세요. Hugging Face에서 모델을 찾고, Ollama로 내 컴퓨터에서 실행하는 법까지 배웁니다.',
+    duration: '2~3주',
+    topics: [
+      {
+        title: '오픈소스 vs 클로즈드소스 AI',
+        description: 'AI 모델은 크게 오픈소스와 클로즈드소스로 나뉩니다. 오픈소스(Llama, Mistral, DeepSeek, Gemma, Phi) — 장점: ① 무료 사용 가능 ② 모델 가중치를 다운받아 로컬에서 실행 → 데이터가 외부로 전송되지 않음(프라이버시 보장) ③ 파인튜닝으로 특정 업무에 최적화 가능 ④ 작동 원리를 투명하게 확인 가능. 한계: 최고 성능은 클로즈드 모델이 앞서고, 자체 인프라(GPU 서버) 관리 필요. 클로즈드소스(Claude, ChatGPT, Gemini) — 장점: ① 최고 수준의 성능 ② 인프라 관리 불필요(API 호출만) ③ 빠른 시작. 한계: 사용량 비용 발생, 데이터가 외부 서버로 전송, 커스터마이징 제한. 선택 기준: 비용 민감·데이터 보안 중요 → 오픈소스, 최고 성능·간편한 시작 → 클로즈드. 2026년 주요 오픈소스 모델: Llama 4 (Meta, 범용 최강), DeepSeek-V3/R1 (추론 특화, 무료 API 제공), Mistral (유럽 기반, 다국어 강점), Gemma (Google, 경량 모델), Phi (Microsoft, 소형 고성능). 실전에서는 "클로즈드로 프로토타입 → 비용/보안 이슈 시 오픈소스로 전환"하는 패턴이 가장 흔합니다.',
+        resources: [
+          { label: '오픈소스 vs 클로즈드 모델 비교', url: 'https://hatchworks.com/blog/gen-ai/open-source-vs-closed-llms-guide/' },
+          { label: '2026 최고의 오픈소스 LLM', url: 'https://localaimaster.com/blog/best-open-source-llms-2026' },
+        ],
+        difficulty: 'beginner',
+      },
+      {
+        title: 'Hugging Face — AI의 GitHub',
+        description: 'Hugging Face는 AI 모델의 GitHub입니다. 100만 개 이상의 모델, 데이터셋, 데모 앱이 공유되는 세계 최대 AI 오픈소스 플랫폼입니다. 핵심 기능: ① Hub — 모델 탐색·다운로드. "text-generation", "image-classification" 등 Task별로 모델을 검색하고, 바로 테스트해볼 수 있습니다. 예: huggingface.co/models에서 "korean"을 검색하면 한국어 특화 모델을 찾을 수 있습니다 ② Inference Providers — API 한 줄로 모델 실행. 자체 서버 없이 Hugging Face 인프라에서 모델을 실행합니다. 유료 모델 대비 훨씬 저렴하거나 무료 ③ Spaces — Gradio/Streamlit으로 만든 AI 데모를 무료 호스팅. 포트폴리오 프로젝트를 배포하기에 최적 ④ Transformers.js — 브라우저에서 직접 AI를 실행합니다. 서버 없이 클라이언트만으로 텍스트 분류, 번역, 이미지 분석이 가능. 시작법: huggingface.co에 가입 → Models 탭에서 관심 분야 탐색 → "Use this model" 버튼으로 바로 실습.',
+        resources: [
+          { label: 'Hugging Face Hub 문서', url: 'https://huggingface.co/docs/hub/en/index' },
+          { label: 'Transformers.js 공식 문서', url: 'https://huggingface.co/docs/transformers.js/en/index' },
+          { label: 'HuggingFace 101 코스', url: 'https://github.com/huggingface/101-course' },
+        ],
+        difficulty: 'beginner',
+      },
+      {
+        title: 'Ollama — 내 컴퓨터에서 AI 실행하기',
+        description: 'Ollama는 로컬 컴퓨터에서 LLM을 실행하는 가장 쉬운 방법입니다. 왜 로컬 실행이 필요한가? ① API 비용 0원 — 아무리 많이 써도 무료 ② 인터넷 불필요 — 비행기에서도 AI 사용 가능 ③ 데이터 프라이버시 — 내 데이터가 외부 서버로 전송되지 않음. 회사 기밀 문서 분석에 적합 ④ 커스터마이징 — 원하는 모델을 자유롭게 선택·교체. 시작법 (3단계): ① ollama.com에서 설치 파일 다운로드 → 설치 ② 터미널에서 ollama pull llama3.2 → 모델 다운로드 (약 2GB) ③ ollama run llama3.2 → 바로 대화 시작! "서울 여행 계획 세워줘"라고 입력하면 로컬에서 AI가 답변합니다. 추천 모델: llama3.2 (범용, 3B/8B), deepseek-r1 (추론 특화), phi4 (소형 고성능, 노트북에서도 실행). 한계: GPU가 없으면 응답이 느리고, 클로즈드 모델(Claude Opus, GPT-5.2) 대비 성능 차이가 있습니다. 8GB 이상 RAM, Apple Silicon Mac이나 NVIDIA GPU가 있으면 쾌적하게 사용 가능합니다. LangChain 연동: from langchain_ollama import ChatOllama / llm = ChatOllama(model="llama3.2") 한 줄로 기존 LangChain 코드에 로컬 모델을 연결할 수 있습니다.',
+        resources: [
+          { label: 'Ollama 공식 문서', url: 'https://docs.ollama.com/' },
+          { label: 'Ollama 모델 라이브러리', url: 'https://ollama.com/library' },
+        ],
+        difficulty: 'intermediate',
+      },
+    ],
+  },
+  {
+    id: 'multimodal-ai',
+    num: '16',
+    phase: 'AI 심화',
+    title: '멀티모달 AI',
+    description: 'AI는 이제 텍스트만 이해하는 게 아닙니다. 이미지를 보고, 음성을 듣고, 영상을 분석합니다. GPT-5.2와 Claude Opus 모두 이미지를 "볼" 수 있고, Whisper는 음성을 텍스트로, TTS는 텍스트를 음성으로 변환합니다. 이 모듈에서 텍스트를 넘어선 AI 활용법을 배웁니다.',
+    duration: '2~3주',
+    topics: [
+      {
+        title: '이미지 이해 & 생성 (Vision + DALL-E)',
+        description: '2026년 주요 AI 모델(GPT-5.2, Claude Opus 4.6, Gemini 3.1 Pro)은 모두 이미지를 "이해"할 수 있습니다. Vision API 활용 예: ① 사진 속 텍스트 추출 — 명함 사진을 찍어 "이 명함의 이름, 회사, 이메일을 JSON으로 정리해줘" ② 차트 분석 — 그래프 스크린샷을 보여주고 "이 차트의 주요 트렌드를 분석해줘" ③ UI 리뷰 — 앱 스크린샷을 보여주고 "이 UI의 개선점을 제안해줘" ④ 와이어프레임 → 코드 — "이 와이어프레임 스크린샷을 보고 React 컴포넌트로 구현해줘". 이미지 생성: DALL-E(OpenAI)와 gpt-image-1 모델로 텍스트 설명만으로 이미지를 만들 수 있습니다. 마케팅 소재, PPT 삽화, 프로토타입 제작에 실전 활용. 프롬프트 팁: 스타일("미니멀 일러스트"), 구도("중앙 배치"), 색상("파란색 톤")을 명시하면 원하는 결과에 가까워집니다.',
+        resources: [
+          { label: 'OpenAI Vision API 가이드', url: 'https://developers.openai.com/api/docs/guides/images-vision/' },
+          { label: 'Anthropic Vision 가이드', url: 'https://docs.anthropic.com/en/docs/build-with-claude/vision' },
+        ],
+        difficulty: 'intermediate',
+      },
+      {
+        title: '음성 AI — Speech-to-Text & Text-to-Speech',
+        description: '음성과 AI의 결합은 업무 자동화의 새로운 축입니다. [Speech-to-Text] Whisper(OpenAI) — 음성을 텍스트로 변환합니다. 2025년부터 gpt-4o-transcribe 모델이 추가되어 더 높은 정확도를 제공합니다. 활용 예: 회의 녹음 자동 전사, 팟캐스트 요약, 인터뷰 기록. 한국어도 높은 정확도로 지원. API 호출 예: client.audio.transcriptions.create(model="whisper-1", file=audio_file). [Text-to-Speech] OpenAI TTS — 텍스트를 자연스러운 음성으로 변환. 6가지 목소리(alloy, echo, fable, onyx, nova, shimmer) 중 선택. 블로그 글을 오디오로 변환하거나, 앱에 음성 안내를 추가할 때 사용. ElevenLabs — 더 고품질의 음성 합성. 음성 클로닝(본인 목소리로 TTS), 29개 언어 지원, 감정 표현 가능. 무료 티어로 월 10,000자 사용 가능. [실전 파이프라인] 회의 녹음 → Whisper로 전사 → Claude로 핵심 요약 → TTS로 "오디오 브리핑" 생성 → 출퇴근 중 청취. 이런 자동화가 실제 기업에서 사용되고 있습니다.',
+        resources: [
+          { label: 'OpenAI Speech-to-Text', url: 'https://developers.openai.com/api/docs/guides/speech-to-text/' },
+          { label: 'OpenAI Text-to-Speech', url: 'https://developers.openai.com/api/docs/guides/text-to-speech/' },
+          { label: 'ElevenLabs API', url: 'https://elevenlabs.io/docs/api-reference/text-to-speech/convert/~explorer' },
+        ],
+        difficulty: 'intermediate',
+      },
+      {
+        title: '멀티모달 AI 통합 — LangChain & 실전 프로젝트',
+        description: '텍스트, 이미지, 음성을 하나의 AI 파이프라인으로 통합하는 것이 멀티모달 AI의 핵심입니다. LangChain 멀티모달: LangChain은 텍스트+이미지를 함께 처리하는 체인을 지원합니다. 예를 들어 "제품 사진을 보고 → 마케팅 문구를 생성하고 → SNS 포스트를 작성"하는 파이프라인을 하나의 체인으로 구성할 수 있습니다. LlamaIndex 멀티모달 RAG: PDF에 포함된 표, 차트, 이미지까지 인식하여 RAG 시스템에 통합합니다. 텍스트만 인덱싱하는 기존 RAG보다 훨씬 풍부한 검색이 가능합니다. 실전 프로젝트 아이디어: ① 제품 이미지 → AI가 설명 자동 생성 → TTS로 오디오 소개 제작 (이커머스) ② 건물 사진 → AI가 상태 분석 → 보고서 자동 생성 (부동산/건설) ③ 회의 녹음 → 전사 + 화이트보드 사진 분석 → 통합 회의록 생성 (업무 자동화). 멀티모달은 AI 엔지니어의 차별화 역량입니다. 텍스트만 다루는 엔지니어보다 이미지·음성까지 통합하는 엔지니어가 훨씬 넓은 문제를 해결할 수 있습니다.',
+        resources: [
+          { label: 'LangChain 멀티모달 문서', url: 'https://python.langchain.com/docs/concepts/multimodality/' },
+          { label: 'LlamaIndex 멀티모달 RAG', url: 'https://www.llamaindex.ai/blog/multi-modal-rag-621de7525fea' },
+        ],
+        difficulty: 'advanced',
       },
     ],
   },
